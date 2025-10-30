@@ -1,0 +1,83 @@
+2025-10-29 10:42:23,771 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 10:42:41,616 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 10:42:41,616 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 10:42:57,829 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 10:43:05,531 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 10:43:05,531 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 10:55:00,322 [INFO] start_meeting_chat:182 - 🎬 Started enhanced cache-only chat for meeting: 8d205956-b1d4-4780-9266-3829b13832b0
+2025-10-29 11:08:29,380 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 11:08:39,123 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 11:08:39,123 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 11:08:45,622 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 11:08:52,529 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 11:08:52,529 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 11:10:34,747 [INFO] start_meeting_chat:182 - 🎬 Started enhanced cache-only chat for meeting: 753ca751-0ebc-499c-a0e1-632dfc6b1430
+2025-10-29 11:12:41,655 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 11:12:49,908 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 11:12:49,908 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 11:12:55,879 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 11:13:04,921 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 11:13:04,921 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 11:14:56,686 [INFO] start_meeting_chat:182 - 🎬 Started enhanced cache-only chat for meeting: 0ae6ae2a-88bd-44cf-856a-640a981743b7
+2025-10-29 11:43:11,222 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 11:43:15,618 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 11:43:56,051 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 11:44:18,885 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 11:44:26,987 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 11:44:26,987 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 11:44:32,319 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 11:44:40,519 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 11:44:40,520 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 11:46:23,759 [INFO] start_meeting_chat:182 - 🎬 Started enhanced cache-only chat for meeting: 448c0605-dae1-4715-881c-521820903220
+2025-10-29 12:58:29,122 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 12:58:38,456 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 12:58:38,457 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 12:58:43,894 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 12:58:50,714 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 12:58:50,715 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 13:16:44,446 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 13:16:51,664 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 13:16:51,664 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 13:25:29,143 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 13:25:36,887 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 13:25:36,887 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 13:25:44,745 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 13:25:50,587 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 13:25:50,587 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 13:32:35,474 [INFO] start_meeting_chat:182 - 🎬 Started enhanced cache-only chat for meeting: dce8ead8-a942-4de3-a32d-11520d59a7c4
+2025-10-29 14:35:21,686 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 14:35:29,199 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 14:35:29,199 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 14:36:54,732 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 14:37:02,316 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 14:37:02,316 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 14:38:39,592 [INFO] start_meeting_chat:182 - 🎬 Started enhanced cache-only chat for meeting: 664b7bea-5579-4840-9204-eef960104a0c
+2025-10-29 15:07:43,392 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 15:07:47,797 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 15:08:41,772 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 15:08:52,565 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 15:08:52,565 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 15:10:26,837 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 15:10:34,687 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 15:10:34,687 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 15:14:12,242 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 15:14:18,717 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 15:14:18,718 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 15:29:47,924 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 15:29:56,748 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 15:29:56,749 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 15:41:07,180 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 15:41:14,675 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 15:41:14,676 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 15:43:00,052 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 15:43:08,145 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 15:43:08,145 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 16:22:56,555 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 16:23:05,163 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 16:23:05,163 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 17:16:02,013 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 17:16:09,617 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 17:16:09,618 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled
+2025-10-29 17:16:14,927 [INFO] configure_enhanced_logging:465 - ✅ Enhanced cache chat logging active
+2025-10-29 17:16:21,988 [INFO] <module>:39 - ✅ Enhanced cache-only chat Redis connected successfully
+2025-10-29 17:16:21,988 [INFO] __init__:103 - 🗨 Enhanced cache-only chat manager initialized: Enabled

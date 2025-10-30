@@ -1,0 +1,160 @@
+2025-10-29 10:42:23,772 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 10:42:55,220 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 10:42:55,220 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 10:42:57,829 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 10:43:08,973 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 10:43:08,973 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 10:53:41,621 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 8d205956-b1d4-4780-9266-3829b13832b0
+2025-10-29 10:53:41,627 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting 8d205956-b1d4-4780-9266-3829b13832b0
+2025-10-29 10:53:41,629 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': '8d205956-b1d4-4780-9266-3829b13832b0', 'started_at': '2025-10-29T05:23:41.619910+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 10:53:41,630 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 10:53:41,637 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 8d205956-b1d4-4780-9266-3829b13832b0
+2025-10-29 10:55:02,134 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 8d205956-b1d4-4780-9266-3829b13832b0
+2025-10-29 10:55:02,143 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting 8d205956-b1d4-4780-9266-3829b13832b0
+2025-10-29 10:55:02,144 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': '8d205956-b1d4-4780-9266-3829b13832b0', 'started_at': '2025-10-29T05:25:02.133328+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 10:55:02,144 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 10:55:02,158 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 8d205956-b1d4-4780-9266-3829b13832b0
+2025-10-29 11:08:29,380 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 11:08:43,948 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 11:08:43,949 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 11:08:45,622 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 11:08:56,600 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 11:08:56,601 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 11:09:51,680 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 753ca751-0ebc-499c-a0e1-632dfc6b1430
+2025-10-29 11:09:51,690 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting 753ca751-0ebc-499c-a0e1-632dfc6b1430
+2025-10-29 11:09:51,690 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': '753ca751-0ebc-499c-a0e1-632dfc6b1430', 'started_at': '2025-10-29T05:39:51.679053+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 11:09:51,690 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 11:09:51,713 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 753ca751-0ebc-499c-a0e1-632dfc6b1430
+2025-10-29 11:10:36,283 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 753ca751-0ebc-499c-a0e1-632dfc6b1430
+2025-10-29 11:10:36,296 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting 753ca751-0ebc-499c-a0e1-632dfc6b1430
+2025-10-29 11:10:36,297 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': '753ca751-0ebc-499c-a0e1-632dfc6b1430', 'started_at': '2025-10-29T05:40:36.283035+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 11:10:36,297 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 11:10:36,302 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 753ca751-0ebc-499c-a0e1-632dfc6b1430
+2025-10-29 11:12:41,656 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 11:12:53,419 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 11:12:53,420 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 11:12:55,879 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 11:13:08,245 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 11:13:08,245 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 11:13:28,258 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 0ae6ae2a-88bd-44cf-856a-640a981743b7
+2025-10-29 11:13:28,270 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting 0ae6ae2a-88bd-44cf-856a-640a981743b7
+2025-10-29 11:13:28,271 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': '0ae6ae2a-88bd-44cf-856a-640a981743b7', 'started_at': '2025-10-29T05:43:28.257171+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 11:13:28,271 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 11:13:28,287 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 0ae6ae2a-88bd-44cf-856a-640a981743b7
+2025-10-29 11:14:58,834 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 0ae6ae2a-88bd-44cf-856a-640a981743b7
+2025-10-29 11:14:58,848 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 0ae6ae2a-88bd-44cf-856a-640a981743b7
+2025-10-29 11:14:58,853 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting 0ae6ae2a-88bd-44cf-856a-640a981743b7
+2025-10-29 11:14:58,853 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': '0ae6ae2a-88bd-44cf-856a-640a981743b7', 'started_at': '2025-10-29T05:44:58.847224+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 11:14:58,853 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 11:43:11,223 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 11:43:15,618 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 11:43:56,052 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 11:44:18,885 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 11:44:30,167 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 11:44:30,168 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 11:44:32,320 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 11:44:43,655 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 11:44:43,656 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 11:45:34,366 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 448c0605-dae1-4715-881c-521820903220
+2025-10-29 11:45:34,383 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting 448c0605-dae1-4715-881c-521820903220
+2025-10-29 11:45:34,384 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': '448c0605-dae1-4715-881c-521820903220', 'started_at': '2025-10-29T06:15:34.351716+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 11:45:34,384 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 11:45:34,386 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 448c0605-dae1-4715-881c-521820903220
+2025-10-29 11:46:26,034 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 448c0605-dae1-4715-881c-521820903220
+2025-10-29 11:46:26,052 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting 448c0605-dae1-4715-881c-521820903220
+2025-10-29 11:46:26,052 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': '448c0605-dae1-4715-881c-521820903220', 'started_at': '2025-10-29T06:16:26.033595+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 11:46:26,052 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 11:46:26,056 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 448c0605-dae1-4715-881c-521820903220
+2025-10-29 12:58:29,123 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 12:58:42,281 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 12:58:42,281 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 12:58:43,894 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 12:58:55,783 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 12:58:55,783 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 12:59:39,179 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: abc5a123-cb93-485f-b16a-bc2fb72708fe
+2025-10-29 12:59:39,242 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting abc5a123-cb93-485f-b16a-bc2fb72708fe
+2025-10-29 12:59:39,243 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': 'abc5a123-cb93-485f-b16a-bc2fb72708fe', 'started_at': '2025-10-29T07:29:39.177227+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 12:59:39,243 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 12:59:39,273 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: abc5a123-cb93-485f-b16a-bc2fb72708fe
+2025-10-29 13:16:44,446 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 13:16:57,052 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 13:16:57,053 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 13:25:29,143 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 13:25:42,302 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 13:25:42,303 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 13:25:44,745 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 13:25:55,944 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 13:25:55,944 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 13:30:30,723 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: dce8ead8-a942-4de3-a32d-11520d59a7c4
+2025-10-29 13:30:30,748 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting dce8ead8-a942-4de3-a32d-11520d59a7c4
+2025-10-29 13:30:30,748 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': 'dce8ead8-a942-4de3-a32d-11520d59a7c4', 'started_at': '2025-10-29T08:00:30.721822+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 13:30:30,748 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 13:30:30,773 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: dce8ead8-a942-4de3-a32d-11520d59a7c4
+2025-10-29 13:32:38,706 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting dce8ead8-a942-4de3-a32d-11520d59a7c4
+2025-10-29 13:32:38,707 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': 'dce8ead8-a942-4de3-a32d-11520d59a7c4', 'started_at': '2025-10-29T08:00:30.773064+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 13:32:38,707 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 13:32:38,714 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: dce8ead8-a942-4de3-a32d-11520d59a7c4
+2025-10-29 13:32:38,732 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: dce8ead8-a942-4de3-a32d-11520d59a7c4
+2025-10-29 14:35:21,686 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 14:35:34,521 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 14:35:34,523 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 14:36:54,732 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 14:37:07,180 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 14:37:07,180 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 14:38:15,202 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 664b7bea-5579-4840-9204-eef960104a0c
+2025-10-29 14:38:15,205 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting 664b7bea-5579-4840-9204-eef960104a0c
+2025-10-29 14:38:15,205 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': '664b7bea-5579-4840-9204-eef960104a0c', 'started_at': '2025-10-29T09:08:15.188668+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 14:38:15,206 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 14:38:15,223 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 664b7bea-5579-4840-9204-eef960104a0c
+2025-10-29 14:38:42,894 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 664b7bea-5579-4840-9204-eef960104a0c
+2025-10-29 14:38:42,909 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting 664b7bea-5579-4840-9204-eef960104a0c
+2025-10-29 14:38:42,910 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': '664b7bea-5579-4840-9204-eef960104a0c', 'started_at': '2025-10-29T09:08:42.893571+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 14:38:42,910 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 14:38:42,916 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 664b7bea-5579-4840-9204-eef960104a0c
+2025-10-29 15:07:43,392 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 15:07:47,797 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 15:08:41,772 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 15:10:26,838 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 15:10:39,056 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 15:10:39,056 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 15:14:12,242 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 15:14:23,186 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 15:14:23,187 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 15:15:02,994 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: ab488e36-4b82-465d-9443-0f8446598842
+2025-10-29 15:15:03,009 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting ab488e36-4b82-465d-9443-0f8446598842
+2025-10-29 15:15:03,010 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': 'ab488e36-4b82-465d-9443-0f8446598842', 'started_at': '2025-10-29T09:45:02.993747+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 15:15:03,010 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 15:15:03,026 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: ab488e36-4b82-465d-9443-0f8446598842
+2025-10-29 15:29:47,924 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 15:30:00,147 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 15:30:00,147 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 15:31:35,945 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 766b3993-408b-40fc-bd95-9d3bf15d5bb8
+2025-10-29 15:31:35,955 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting 766b3993-408b-40fc-bd95-9d3bf15d5bb8
+2025-10-29 15:31:35,956 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': '766b3993-408b-40fc-bd95-9d3bf15d5bb8', 'started_at': '2025-10-29T10:01:35.944801+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 15:31:35,956 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 15:31:35,965 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 766b3993-408b-40fc-bd95-9d3bf15d5bb8
+2025-10-29 15:41:07,180 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 15:41:19,774 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 15:41:19,774 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 15:43:00,052 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 15:43:11,517 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 15:43:11,518 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 16:22:56,555 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 16:23:08,898 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 16:23:08,899 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 16:24:00,837 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 3d2a70df-120f-496b-a360-233df9b17496
+2025-10-29 16:24:00,863 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting 3d2a70df-120f-496b-a360-233df9b17496
+2025-10-29 16:24:00,864 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': '3d2a70df-120f-496b-a360-233df9b17496', 'started_at': '2025-10-29T10:54:00.836286+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 16:24:00,864 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 16:24:00,882 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: 3d2a70df-120f-496b-a360-233df9b17496
+2025-10-29 17:16:02,013 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 17:16:12,497 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 17:16:12,498 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 17:16:14,927 [INFO] configure_enhanced_logging:466 - ✅ Enhanced cache hand raise logging active
+2025-10-29 17:16:25,085 [INFO] <module>:34 - ✅ Cache-only hand raise Redis connected successfully
+2025-10-29 17:16:25,085 [INFO] __init__:62 - ✋ Cache-only hand raise manager initialized: Enabled
+2025-10-29 17:19:19,761 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: bf602061-859c-463c-a489-1805cb7e1dd6
+2025-10-29 17:19:19,778 [INFO] end_meeting_hand_raise:351 - 🗑 DELETED all hand raise data for meeting bf602061-859c-463c-a489-1805cb7e1dd6
+2025-10-29 17:19:19,779 [INFO] end_meeting_hand_raise:352 -    - Final stats: {'meeting_id': 'bf602061-859c-463c-a489-1805cb7e1dd6', 'started_at': '2025-10-29T11:49:19.759999+00:00', 'total_hands_raised': 0, 'total_acknowledged': 0, 'total_denied': 0, 'current_raised_hands': 0, 'last_hand_at': None, 'last_action_at': None, 'status': 'active', 'storage_type': 'cache_only'}
+2025-10-29 17:19:19,779 [INFO] end_meeting_hand_raise:353 -    - Redis keys deleted: 1
+2025-10-29 17:19:19,804 [INFO] start_meeting_hand_raise:100 - ✋ Started cache-only hand raise for meeting: bf602061-859c-463c-a489-1805cb7e1dd6
