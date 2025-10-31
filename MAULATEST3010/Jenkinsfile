@@ -19,11 +19,12 @@ pipeline {
 
         stage('Login to AWS ECR') {
             steps {
-               withAWS(region: "${AWS_REGION}", credentials: 'aws-creds') {
-                 sh """
-                 aws ecr get-login-password --region ${AWS_REGION} \
-                 | docker login --username AWS --password-stdin ${ECR_URL}
-                 """
+                withAWS(region: "${AWS_REGION}", credentials: 'aws-creds') {
+                    sh """
+                    aws ecr get-login-password --region ${AWS_REGION} \
+                    | docker login --username AWS --password-stdin ${ECR_URL}
+                    """
+                }
             }
         }
 
@@ -36,7 +37,7 @@ pipeline {
 
         stage('Tag Docker Image') {
             steps {
-                echo "🏷 Tagging Docker Image..."
+                echo "Tagging Docker Image..."
                 sh "docker tag ${ECR_REPO}:latest ${ECR_URL}/${ECR_REPO}:${IMAGE_TAG}"
             }
         }
