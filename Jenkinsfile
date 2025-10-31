@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        AWS_REGION = "ap-south-1"
-        AWS_ACCOUNT_ID = "123456789012"
+        AWS_REGION = "us-east-1"
+        AWS_ACCOUNT_ID = "379322108224"
         ECR_REPO = "my-frontend-repo"
         IMAGE_TAG = "latest"
     }
