@@ -30,7 +30,7 @@ pipeline {
 
         stage('docker build') {
             steps {
-                sh "docker build -t ${ECR_REPO}:${IMAGE_TAG} -f frontend/Dockerfile ."
+                sh "docker build -t ${ECR_REPO}:${IMAGE_TAG} -f Dockerfile ."
             }
         }
 
