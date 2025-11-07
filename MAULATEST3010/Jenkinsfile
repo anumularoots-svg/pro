@@ -6,11 +6,11 @@ pipeline {
         AWS_ACCOUNT_ID = "379322108224"
         ECR_REPO = "my-frontend-repo"
         IMAGE_TAG = "latest"
-        ECR_URL = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+        REPOSITORY_URI = "379322108224.dkr.ecr.us-east-1.amazonaws.com/my-frontend-repo"
     }
 
     stages {
-        stage('Checkout Code') {
+        stage('code checkout') {
             steps {
                 echo "Cloning Repository..."
                 git branch: 'main', url: 'https://github.com/anumularoots-svg/pro.git'
@@ -19,50 +19,31 @@ pipeline {
 
         stage('AWS Login to ECR') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'aws-creds', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-                    sh '''
-                        export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-                        export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-
-                        aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
-                        aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-                        aws configure set default.region ${AWS_REGION}
-
-                        aws ecr get-login-password --region ${AWS_REGION} \
-                        | docker login --username AWS --password-stdin ${ECR_URL}
-                    '''
+                script {
+                    sh """
+                    aws ecr get-login-password --region ${AWS_REGION} | \
+                    docker login --username AWS --password-stdin ${REPOSITORY_URI}
+                    """
                 }
             }
         }
 
-        stage('Build Docker Image') {
+        stage('docker build') {
             steps {
-                echo "Building Docker Image..."
-                sh "docker build -t ${ECR_REPO}:latest ."
+                sh "docker build -t ${ECR_REPO}:${IMAGE_TAG} ."
             }
         }
 
-        stage('Tag Docker Image') {
+        stage('docker tag') {
             steps {
-                echo "Tagging Docker Image..."
-                sh "docker tag ${ECR_REPO}:latest ${ECR_URL}/${ECR_REPO}:${IMAGE_TAG}"
+                sh "docker tag ${ECR_REPO}:${IMAGE_TAG} ${REPOSITORY_URI}:${IMAGE_TAG}"
             }
         }
 
-        stage('Push to ECR') {
+        stage('docker push') {
             steps {
-                echo "Pushing Docker Image to ECR..."
-                sh "docker push ${ECR_URL}/${ECR_REPO}:${IMAGE_TAG}"
+                sh "docker push ${REPOSITORY_URI}:${IMAGE_TAG}"
             }
-        }
-    }
-
-    post {
-        success {
-            echo '✅ Build & Push to ECR Successful'
-        }
-        failure {
-            echo '❌ Build Failed. Check logs.'
         }
     }
 }
