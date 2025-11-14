@@ -28,7 +28,7 @@ pipeline {
 
         stage('Build Frontend Image') {
             steps {
-                dir('pro/meeting-frontend') {    // adjust this path if your frontend folder name differs
+                dir('pro/') {    // adjust this path if your frontend folder name differs
                     sh '''
                     docker build -t meeting-frontend:latest -f Dockerfile .
                     docker tag meeting-frontend:latest ${ECR_FRONTEND_REPO}:latest
