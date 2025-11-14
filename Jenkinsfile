@@ -28,19 +28,17 @@ pipeline {
 
         stage('Build Frontend Image') {
             steps {
-                dir('pro/') {    // adjust this path if your frontend folder name differs
-                    sh '''
-                    docker build -t meeting-frontend:latest -f Dockerfile .
-                    docker tag meeting-frontend:latest ${ECR_FRONTEND_REPO}:latest
-                    docker push ${ECR_FRONTEND_REPO}:latest
-                    '''
-                }
+                sh '''
+                docker build -t meeting-frontend:latest -f Dockerfile .
+                docker tag meeting-frontend:latest ${ECR_FRONTEND_REPO}:latest
+                docker push ${ECR_FRONTEND_REPO}:latest
+                '''
             }
         }
 
         stage('Build Backend Image') {
             steps {
-                dir('pro/SampleDB_W') {
+                dir('SampleDB_W') {
                     sh '''
                     docker build -t meeting-backend:latest -f Dockerfile .
                     docker tag meeting-backend:latest ${ECR_BACKEND_REPO}:latest
