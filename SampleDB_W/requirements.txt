@@ -19,7 +19,7 @@ asyncpg==0.30.0
 attrs==25.3.0
 autobahn==24.4.2
 Automat==25.4.16
-av==10.0.0
+#av==10.0.0
 azure-common==1.1.28
 azure-core==1.35.0
 azure-mgmt-datalake-nspkg==3.0.1
