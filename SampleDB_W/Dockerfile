@@ -1,25 +1,26 @@
-FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
+FROM python:3.10-slim
 
+# Prevent interactive prompts
 ENV DEBIAN_FRONTEND=noninteractive
+
+# Set work directory
 WORKDIR /app
 
+# Install OS dependencies
 RUN apt-get update && apt-get install -y \
-    python3.10 python3.10-distutils python3-pip build-essential \
-    libmysqlclient-dev pkg-config \
-    libgl1-mesa-glx libglib2.0-0 ffmpeg \
-    libavdevice-dev libavformat-dev libavfilter-dev libavcodec-dev \
-    libavutil-dev libswscale-dev libswresample-dev libpostproc-dev \
+    default-libmysqlclient-dev build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-RUN ln -sf /usr/bin/python3.10 /usr/bin/python
-RUN python3.10 -m pip install --upgrade pip
-
+# Install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt   # <<< FIX
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy backend project files
 COPY . .
 
-ENV PYTHONUNBUFFERED=1
+# Expose Django/Gunicorn port
 EXPOSE 8221
 
+# Gunicorn command
 CMD ["gunicorn", "core.wsgi:application", "--bind", "0.0.0.0:8221", "--workers", "3"]
