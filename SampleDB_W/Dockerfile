@@ -12,15 +12,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     g++ \
     libffi-dev \
     libssl-dev \
-    libmysqlclient-dev \
+    default-libmysqlclient-dev \
     pkg-config \
     ffmpeg \
+    ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements
 COPY requirements.txt .
 
-# Upgrade pip and install dependencies
+# Upgrade pip and install Python packages
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
