@@ -1,31 +1,34 @@
-FROM jrottenberg/ffmpeg:6.0-python3.10-slim
+FROM python:3.10-slim
 
-ENV PYTHONUNBUFFERED=1 \
-    DEBIAN_FRONTEND=noninteractive
-
+ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /app
 
-# -------- Install build tools + MySQL libs --------
+# Install FFmpeg + required libs
 RUN apt-get update && apt-get install -y \
-    gcc \
-    g++ \
+    ffmpeg \
+    libavcodec-dev \
+    libavdevice-dev \
+    libavfilter-dev \
+    libavformat-dev \
+    libavutil-dev \
+    libswscale-dev \
+    libswresample-dev \
+    libpostproc-dev \
     build-essential \
-    default-libmysqlclient-dev \
     pkg-config \
+    default-libmysqlclient-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# -------- Copy requirements --------
+# Install Python dependencies
 COPY requirements.txt .
-
-# -------- Install Python deps --------
-# PyAV installs cleanly on this image (precompiled wheels)
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel
-
+RUN pip install --upgrade pip setuptools wheel
+RUN pip install "cython<3"
 RUN pip install --no-cache-dir -r requirements.txt
 
-# -------- Copy backend --------
+# Copy backend source
 COPY . .
 
+ENV PYTHONUNBUFFERED=1
 EXPOSE 8221
 
 CMD ["gunicorn", "core.wsgi:application", "--bind", "0.0.0.0:8221", "--workers", "3"]
