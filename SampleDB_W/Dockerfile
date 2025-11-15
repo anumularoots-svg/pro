@@ -1,6 +1,8 @@
 FROM python:3.10-slim
 
-ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1 \
+    DEBIAN_FRONTEND=noninteractive
+
 WORKDIR /app
 
 # ----------------------------
@@ -27,8 +29,8 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 
 # Fix PyAV build issue: requires Cython < 3
-RUN pip install --upgrade pip
-RUN pip install "cython<3"
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir "cython<3"
 
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -37,7 +39,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # ----------------------------
 COPY . .
 
-ENV PYTHONUNBUFFERED=1
 EXPOSE 8221
 
 CMD ["gunicorn", "core.wsgi:application", "--bind", "0.0.0.0:8221", "--workers", "3"]
