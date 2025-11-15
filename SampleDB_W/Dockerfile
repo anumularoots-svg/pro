@@ -1,37 +1,29 @@
-FROM python:3.10-slim
+FROM jrottenberg/ffmpeg:6.0-python3.10-slim
 
 ENV PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /app
 
-# ---- Install system dependencies ----
+# -------- Install build tools + MySQL libs --------
 RUN apt-get update && apt-get install -y \
-    pkg-config \
+    gcc \
+    g++ \
     build-essential \
-    ffmpeg \
-    libavcodec-dev \
-    libavdevice-dev \
-    libavfilter-dev \
-    libavformat-dev \
-    libavutil-dev \
-    libswscale-dev \
-    libswresample-dev \
-    libpostproc-dev \
     default-libmysqlclient-dev \
+    pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
-# ---- Copy only requirements first ----
+# -------- Copy requirements --------
 COPY requirements.txt .
 
-# ---- IMPORTANT: Install stable PyAV wheels (no compiling) ----
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel \
-    && pip install --no-cache-dir "av==10.0.0"
+# -------- Install Python deps --------
+# PyAV installs cleanly on this image (precompiled wheels)
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 
-# ---- Install remaining requirements ----
 RUN pip install --no-cache-dir -r requirements.txt
 
-# ---- Copy backend project ----
+# -------- Copy backend --------
 COPY . .
 
 EXPOSE 8221
