@@ -5,21 +5,26 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-# Install system dependencies for mysqlclient, ffmpeg, and builds
+# Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
+    gcc \
+    g++ \
+    libffi-dev \
+    libssl-dev \
+    libmysqlclient-dev \
     pkg-config \
-    default-libmysqlclient-dev \
     ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements
 COPY requirements.txt .
 
-# Install Python deps
+# Upgrade pip and install dependencies
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy app
+# Copy project files
 COPY . .
 
 EXPOSE 8000
