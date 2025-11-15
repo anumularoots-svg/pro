@@ -3,7 +3,6 @@ FROM python:3.10-slim
 ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
-# Install OS dependencies + FFmpeg
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ffmpeg \
     libavformat-dev \
@@ -20,14 +19,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
-# Upgrade pip
 RUN pip install --upgrade pip setuptools wheel
 
-# Install Python deps
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy your project
 COPY . .
 
 EXPOSE 8221
