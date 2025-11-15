@@ -1,4 +1,4 @@
-FROM jrottenberg/ffmpeg:6.0-python3.10-bullseye
+FROM jrottenberg/ffmpeg:6.1-python3.10
 
 ENV PYTHONUNBUFFERED=1
 WORKDIR /app
@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip install --upgrade pip setuptools wheel
 
-# Don't install av manually — wheels will work here
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
