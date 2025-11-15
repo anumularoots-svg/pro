@@ -5,9 +5,7 @@ ENV PYTHONUNBUFFERED=1 \
 
 WORKDIR /app
 
-# ----------------------------
-# Install system dependencies
-# ----------------------------
+# ---- Install system dependencies ----
 RUN apt-get update && apt-get install -y \
     pkg-config \
     build-essential \
@@ -23,20 +21,17 @@ RUN apt-get update && apt-get install -y \
     default-libmysqlclient-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# ----------------------------
-# Install Python dependencies
-# ----------------------------
+# ---- Copy only requirements first ----
 COPY requirements.txt .
 
-# Fix PyAV build issue: requires Cython < 3
-RUN pip install --no-cache-dir --upgrade pip
-RUN pip install --no-cache-dir "cython<3"
+# ---- IMPORTANT: Install stable PyAV wheels (no compiling) ----
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel \
+    && pip install --no-cache-dir "av==10.0.0"
 
+# ---- Install remaining requirements ----
 RUN pip install --no-cache-dir -r requirements.txt
 
-# ----------------------------
-# Copy backend project
-# ----------------------------
+# ---- Copy backend project ----
 COPY . .
 
 EXPOSE 8221
