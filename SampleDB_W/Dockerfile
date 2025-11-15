@@ -1,30 +1,17 @@
 FROM python:3.10-slim
 
-ENV PYTHONUNBUFFERED=1
-WORKDIR /app
-
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y \
     ffmpeg \
-    libavformat-dev \
-    libavcodec-dev \
-    libavdevice-dev \
-    libavutil-dev \
-    libswscale-dev \
-    libswresample-dev \
-    libavfilter-dev \
-    gcc \
-    g++ \
-    make \
-    build-essential \
-    pkg-config \
-    && rm -rf /var/lib/apt/lists/*
+    libavformat-dev libavcodec-dev libavdevice-dev libavutil-dev \
+    libswscale-dev libswresample-dev libavfilter-dev \
+    build-essential cython3 pkg-config && \
+    rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip setuptools wheel
+WORKDIR /app
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-EXPOSE 8221
-CMD ["gunicorn", "core.wsgi:application", "--bind", "0.0.0.0:8221", "--workers", "3"]
+CMD ["python", "app.py"]
