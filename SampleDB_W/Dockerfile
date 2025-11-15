@@ -11,18 +11,11 @@ RUN apt-get update && apt-get install -y \
     libavutil-dev libswscale-dev libswresample-dev libpostproc-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Set python alias
 RUN ln -sf /usr/bin/python3.10 /usr/bin/python
-RUN python3.10 -m pip install --upgrade pip wheel setuptools
+RUN python3.10 -m pip install --upgrade pip
 
-# 🔥 IMPORTANT FIX: Install Cython + numpy BEFORE requirements
-RUN pip install --no-cache-dir "Cython<3.0" numpy
-
-# Copy requirements
 COPY requirements.txt .
-
-# Install your requirements including `av`
-RUN pip install --no-cache-dir --no-binary av -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt   # <<< FIX
 
 COPY . .
 
