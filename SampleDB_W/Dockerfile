@@ -3,7 +3,6 @@ FROM python:3.10-slim
 ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /app
 
-# Install FFmpeg + build deps
 RUN apt-get update && apt-get install -y \
     ffmpeg \
     libavcodec-dev \
@@ -19,22 +18,15 @@ RUN apt-get update && apt-get install -y \
     default-libmysqlclient-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Install correct PyAV build deps
 RUN pip install --upgrade pip setuptools wheel
 
-# CRITICAL: lock Cython to PyAV-compatible version
-RUN pip install "cython==0.29.36"
+# Critical: force working PyAV before anything else
+RUN pip install "cython==0.29.36" "av==10.0.0" --no-cache-dir
 
-# Copy requirements
 COPY requirements.txt .
-
-# Install requirements
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy source
 COPY . .
 
 EXPOSE 8221
-ENV PYTHONUNBUFFERED=1
-
 CMD ["gunicorn", "core.wsgi:application", "--bind", "0.0.0.0:8221", "--workers", "3"]
