@@ -3,21 +3,25 @@ FROM python:3.10-bullseye
 ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
-# Install FFmpeg + build tools
-RUN apt-get update && apt-get install -y --no-install-recommends \
+# Install FFmpeg 6.x (works with av >= 12)
+RUN apt-get update && apt-get install -y \
+    software-properties-common && \
+    add-apt-repository -y ppa:savoury1/ffmpeg6 && \
+    apt-get update && apt-get install -y \
     ffmpeg \
-    gcc g++ make build-essential \
+    gcc g++ make pkg-config \
+    libavcodec-dev libavformat-dev libavdevice-dev libavfilter-dev \
+    libswscale-dev libswresample-dev libavutil-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip
 RUN pip install --upgrade pip setuptools wheel
 
-# Install PyAV from prebuilt wheel (no build, no Cython)
-RUN pip install av==10.0.0 --only-binary=:all:
+# Install PyAV (latest available)
+RUN pip install av --only-binary=:all:
 
-# Copy requirements
+# Install remaining requirements
 COPY requirements.txt .
-
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy project
