@@ -4,18 +4,25 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /app
 
-# Install required system libraries for PyAV + MySQL
+# Install system dependencies for PyAV, FFmpeg, MySQL, OpenCV
 RUN apt-get update && apt-get install -y \
     pkg-config \
     ffmpeg \
-    libavdevice-dev libavformat-dev libavfilter-dev libavcodec-dev \
-    libavutil-dev libswscale-dev libswresample-dev libpostproc-dev \
-    default-libmysqlclient-dev build-essential \
+    libavcodec-dev \
+    libavdevice-dev \
+    libavfilter-dev \
+    libavformat-dev \
+    libavutil-dev \
+    libswresample-dev \
+    libswscale-dev \
+    libpostproc-dev \
+    default-libmysqlclient-dev \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python deps
+# Install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy project files
