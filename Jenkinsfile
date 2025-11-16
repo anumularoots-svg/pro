@@ -7,8 +7,6 @@ pipeline {
     CLUSTER_NAME = 'myapp-cluster'
     ECR_FRONTEND = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/meeting-frontend"
     ECR_BACKEND  = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/meeting-backend"
-    BACKEND_DIR = 'backend'
-    FRONTEND_DIR = 'frontend'
   }
 
   stages {
@@ -27,7 +25,6 @@ pipeline {
 
     stage('Build & Push Frontend') {
       steps {
-        dir("${FRONTEND_DIR}") {
           sh '''
             docker build -t meeting-frontend:latest -f Dockerfile .
             docker tag meeting-frontend:latest ${ECR_FRONTEND}:latest
@@ -36,11 +33,10 @@ pipeline {
           '''
         }
       }
-    }
 
     stage('Build & Push Backend') {
       steps {
-        dir("${BACKEND_DIR}") {
+        dir('SampleDB_W') {
           sh '''
             docker build -t meeting-backend:latest -f Dockerfile .
             docker tag meeting-backend:latest ${ECR_BACKEND}:latest
