@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: myapp
+data:
+  DJANGO_SETTINGS_MODULE: "SampleDB_W.settings"
+  DB_NAME: "meetingdb"
+  DB_HOST: "mysql-service"   # replace if RDS
+  DB_PORT: "3306"
