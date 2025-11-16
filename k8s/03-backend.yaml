@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: myapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: YOUR_AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/meeting-backend:latest
+        ports:
+        - containerPort: 8221
+        env:
+          - name: DB_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: app-config
+                key: DB_HOST
+          - name: DB_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: app-config
+                key: DB_NAME
+          - name: DB_USER
+            valueFrom:
+              secretKeyRef:
+                name: mysql-secret
+                key: username
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mysql-secret
+                key: password
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: myapp
+spec:
+  selector:
+    app: backend
+  ports:
+  - protocol: TCP
+    port: 8221
+    targetPort: 8221
+  type: ClusterIP
