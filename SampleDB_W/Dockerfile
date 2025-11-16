@@ -1,11 +1,12 @@
-FROM nvidia/cuda:12.6.0-devel-ubuntu22.04
+# backend/Dockerfile
+FROM python:3.10-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-# Install system dependencies
+# Install system deps needed for mysqlclient / opencv / builds
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     gcc \
@@ -15,26 +16,22 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     default-libmysqlclient-dev \
     pkg-config \
     ffmpeg \
+    libsm6 \
+    libxext6 \
+    libgl1 \
     ca-certificates \
-    python3.10 \
-    python3.10-dev \
-    python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
-# Upgrade pip
-RUN python3.10 -m pip install --upgrade pip setuptools wheel
-
-# Copy requirements
+# Copy requirements and install
 COPY requirements.txt .
-
-# Install Python dependencies
+RUN pip install --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project files
+# Copy app source (assumes manage.py at repo root of backend/)
 COPY . .
 
-# Expose Django port
-EXPOSE 8000
+EXPOSE 8221
 
-# Start Django server
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+# Start with Uvicorn (Django ASGI) or Gunicorn for WSGI
+# Use appropriate entry command depending on your Django setup.
+CMD ["gunicorn", "SampleDB_W.wsgi:application", "--bind", "0.0.0.0:8221", "--workers", "3"]
