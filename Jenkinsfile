@@ -51,8 +51,8 @@ pipeline {
         stage('Update K8s Manifests') {
             steps {
                 sh '''
-                sed -i "s|image: .*meeting-frontend:.*|image: ${ECR_FRONTEND_REPO}:latest|g" k8s/frontend-deployment.yaml
-                sed -i "s|image: .*meeting-backend:.*|image: ${ECR_BACKEND_REPO}:latest|g" k8s/backend-deployment.yaml
+                sed -i "s|image: .*meeting-frontend:.*|image: ${ECR_FRONTEND_REPO}:latest|g" k8s/frontend.yaml
+                sed -i "s|image: .*meeting-backend:.*|image: ${ECR_BACKEND_REPO}:latest|g" k8s/backend.yaml
                 '''
             }
         }
@@ -62,10 +62,8 @@ pipeline {
                 sh '''
                 aws eks update-kubeconfig --name ${CLUSTER_NAME} --region ${AWS_REGION}
 
-                kubectl apply -f k8s/mysql-deployment.yaml
-                kubectl apply -f k8s/backend-deployment.yaml
-                kubectl apply -f k8s/frontend-deployment.yaml
-                kubectl apply -f k8s/services.yaml
+                kubectl apply -f k8s/backend.yaml
+                kubectl apply -f k8s/frontend.yaml
                 '''
             }
         }
