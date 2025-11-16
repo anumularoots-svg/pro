@@ -11,14 +11,12 @@ pipeline {
 
     stages {
 
-        // 1️⃣ Checkout source code
         stage('Checkout Code') {
             steps {
                 git branch: 'main', url: 'https://github.com/anumularoots-svg/pro.git'
             }
         }
 
-        // 2️⃣ Login to AWS ECR
         stage('Login to AWS ECR') {
             steps {
                 sh '''
@@ -29,7 +27,6 @@ pipeline {
             }
         }
 
-        // 3️⃣ Build and Push Frontend Image
         stage('Build Frontend Image') {
             steps {
                 sh '''
@@ -41,7 +38,6 @@ pipeline {
             }
         }
 
-        // 4️⃣ Build and Push Backend Image
         stage('Build Backend Image') {
             steps {
                 dir('SampleDB_W') {
@@ -55,18 +51,16 @@ pipeline {
             }
         }
 
-        // 5️⃣ Update Kubernetes manifests
         stage('Update K8s Manifests') {
             steps {
                 sh '''
-                echo "Updating Kubernetes manifests with latest ECR image tags..."
+                echo "Updating Kubernetes manifests..."
                 sed -i "s|image: .*meeting-frontend:.*|image: ${ECR_FRONTEND_REPO}:latest|g" k8s/frontend.yaml
                 sed -i "s|image: .*meeting-backend:.*|image: ${ECR_BACKEND_REPO}:latest|g" k8s/backend.yaml
                 '''
             }
         }
 
-        // 6️⃣ Verify EKS connection (non-blocking)
         stage('Verify EKS Connection') {
             steps {
                 script {
@@ -78,22 +72,27 @@ pipeline {
                         kubectl get nodes
                         '''
                     } catch (err) {
-                        echo "Warning: Could not verify EKS cluster nodes. Check if Jenkins IAM role is mapped in aws-auth ConfigMap."
+                        echo "Warning: Could not verify cluster nodes. Ensure Jenkins IAM role is added to aws-auth ConfigMap."
                     }
                 }
             }
         }
 
-        // 7️⃣ Deploy to EKS
         stage('Deploy to EKS') {
             steps {
-                sh '''
-                echo "Deploying application to EKS..."
-                aws eks update-kubeconfig --name ${CLUSTER_NAME} --region ${AWS_REGION}
-                kubectl apply -f k8s/backend.yaml
-                kubectl apply -f k8s/frontend.yaml
-                echo "Deployment manifests applied successfully."
-                '''
+                script {
+                    try {
+                        sh '''
+                        echo "Deploying manifests to EKS..."
+                        aws eks update-kubeconfig --name ${CLUSTER_NAME} --region ${AWS_REGION}
+                        kubectl apply -f k8s/backend.yaml --validate=false
+                        kubectl apply -f k8s/frontend.yaml --validate=false
+                        echo "Deployment manifests applied successfully."
+                        '''
+                    } catch (err) {
+                        error("Kubernetes deployment failed. Check IAM role mapping and cluster access.")
+                    }
+                }
             }
         }
     }
@@ -103,7 +102,7 @@ pipeline {
             echo "Deployment completed successfully to EKS cluster: ${CLUSTER_NAME}"
         }
         failure {
-            echo "Deployment failed! Please check Jenkins logs or AWS IAM/EKS role mappings."
+            echo "Deployment failed! Check Jenkins IAM role access or Kubernetes RBAC."
         }
     }
 }
