@@ -21,8 +21,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Copy requirements
 COPY requirements.txt .
 
-# Upgrade pip and install Python packages
-RUN pip install --upgrade pip
+# Upgrade pip, setuptools, wheel
+RUN pip install --upgrade pip setuptools wheel
+
+# Install Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy project files
