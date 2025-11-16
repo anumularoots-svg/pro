@@ -27,12 +27,14 @@ RUN python3.10 -m pip install --upgrade pip setuptools wheel
 # Copy requirements
 COPY requirements.txt .
 
-# Install Python packages
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy project files
 COPY . .
 
+# Expose Django port
 EXPOSE 8000
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Start Django server
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
